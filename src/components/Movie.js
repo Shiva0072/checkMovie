@@ -7,7 +7,7 @@ function Movie({ id, poster_path, title, overview }) {
   return (
     <div>
       <img src={BASE + poster_path} alt={title}></img>
-      <Link to={`/movie/${id}`}>
+      <Link to={`${process.env.PUBLIC_URL}/movie/${id}`}>
         <h2>{title}</h2>
       </Link>
       <p>{overview}</p>
